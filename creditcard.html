@@ -1,0 +1,75 @@
+#CreditCard With 3D Animation & Glassmorphism
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism Credit Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(180deg, #e6e6e6 0%, #f0f0f0 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .credit-card {
+            width: 300px;
+            height: 180px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            transform: perspective(1000px) rotateY(20deg);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .credit-card::before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            bottom: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+        }
+
+        .credit-card .chip {
+            width: 40px;
+            height: 30px;
+            background: linear-gradient(45deg, #f0f0f0, #d0d0d0);
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .credit-card .number {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .credit-card .holder {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .credit-card .expiry {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="credit-card">
+        <div class="chip"></div>
+        <div class="number">**** **** **** 1234</div>
+        <div class="holder">John Doe</div>
+        <div class="expiry">Expires: 12/23</div>
+    </div>
+</body>
+</html>
